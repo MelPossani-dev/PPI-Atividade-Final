@@ -32,6 +32,8 @@ app.use(session({
  })
  app.use(express.json());
  app.use(express.urlencoded({extended: true}));
+ 
+ app.use(autenticar, express.static(path.join(process.cwd(), 'privado')));
 
  app.listen(porta, host, ()=>{
     console.log(`Servidor escutando em http://${host}:${porta}`);
