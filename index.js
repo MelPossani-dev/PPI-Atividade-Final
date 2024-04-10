@@ -3,10 +3,14 @@ import process from 'process';
 import path from 'path';
 import session from 'express-session';
 import { error } from 'console';
+import rotaSecretaria from './Rotas/rotaSecretaria';
 
 const host='0.0.0.0'; 
 const porta = 4000;  
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true})); 
 
 app.use(session({
     secret: '$&n#@',
@@ -32,8 +36,17 @@ app.use(session({
  })
  app.use(express.json());
  app.use(express.urlencoded({extended: true}));
- 
+
+ app.use(express.json());
+app.use('/secretarias', rotaSecretaria);
+
+
  app.use(autenticar, express.static(path.join(process.cwd(), 'privado')));
+
+ app.use('/controle', rotaSecretaria);
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 
  app.listen(porta, host, ()=>{
     console.log(`Servidor escutando em http://${host}:${porta}`);
