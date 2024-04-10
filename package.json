@@ -1,0 +1,32 @@
+{
+  "name": "ppi-atividade-final",
+  "version": "1.0.0",
+  "description": "Atividade final da matéria Programação para Internet da UNOESTE",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeMorelli-py/PPI-Atividade-Final.git"
+  },
+  "keywords": [
+    "FrontEnd",
+    "javascript",
+    "FullStack",
+    "Programacao"
+  ],
+  "author": "Leandro Morelli e Melissa Possani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeMorelli-py/PPI-Atividade-Final/issues"
+  },
+  "homepage": "https://github.com/LeMorelli-py/PPI-Atividade-Final#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "process": "^0.11.10"
+  }
+}
