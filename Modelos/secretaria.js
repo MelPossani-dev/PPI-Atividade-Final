@@ -1,3 +1,5 @@
+import secretariaDAO from "../Persistencia/secretariaDAO.js";
+
 export default class Secretarias{
     #id;
     #setor;

@@ -6,10 +6,10 @@
 import { Router } from 'express';
 import secretariaCtrl from './../Controles/secretariaCtrl.js';
 
-const rotaCliente = new Router();
+const rotaSecretaria = new Router();
 const secCtrl = new secretariaCtrl();
 
-rotaCliente
+rotaSecretaria
 .get('/', secCtrl.consultar)
 .get('/:termo', secCtrl.consultar)  //atribuindo a função consultar como parâmetro do que executar quando receber um método get na rota
 .post('/', secCtrl.gravar)
