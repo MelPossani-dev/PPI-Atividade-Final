@@ -22,7 +22,7 @@ app.use(session({
          maxAge: 60 * 1000 * 15
     }
  }))
- 
+ //teste
  
 app.use(express.static(path.join(process.cwd(), 'publico')));
  
